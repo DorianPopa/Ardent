@@ -14,6 +14,8 @@
 
     public class ARController : MonoBehaviour
     {
+        private AppController appController = null;
+
         /// <summary>
         /// The first-person camera being used to render the passthrough camera image (AR
         /// background).
@@ -48,18 +50,16 @@
 
         public void Awake()
         {
+            appController = FindObjectOfType<AppController>();
+
             // Enable ARCore to target 60fps camera capture frame rate on supported devices.
             // Note, Application.targetFrameRate is ignored when QualitySettings.vSyncCount != 0.
             if(QualitySettings.vSyncCount == 0)
                 Application.targetFrameRate = 60;
 
-            var www = new WWW("https://people.sc.fsu.edu/~jburkardt/data/obj/lamp.obj");
-            while (!www.isDone)
-                System.Threading.Thread.Sleep(1);
-
-            var textStream = new MemoryStream(Encoding.UTF8.GetBytes(www.text));
-            var loadedObj = new OBJLoader().Load(textStream);
+            var loadedObj = new OBJLoader().Load(appController.objPathToLoad);
             loadedObj.GetComponent<Transform>().localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            //Destroy(GameObject.Find(loadedObj.name));
 
             GameObjectForHorizontalPlane = loadedObj;
         }
@@ -200,7 +200,7 @@
                 unityActivity.Call("runOnUiThread", new AndroidJavaRunnable(() =>
                 {
                     AndroidJavaObject toastObject = 
-                        toastClass.CallStatic<AndroidJavaObject>("makeTest", unityActivity, message, 0);
+                        toastClass.CallStatic<AndroidJavaObject>("makeText", unityActivity, message, 0);
                     toastObject.Call("show");
                 }));
             }
