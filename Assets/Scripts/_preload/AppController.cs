@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class AppController : MonoBehaviour
 {
-    public enum Scenes { Preload = 0, Login = 1 }
+    public enum Scenes { Preload = 0, Login = 1, ARPlacer = 2}
 
     public string objPathToLoad = "";
 

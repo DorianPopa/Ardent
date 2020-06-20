@@ -147,7 +147,7 @@
             // Exit the app when the 'back' button is pressed.
             if (Input.GetKey(KeyCode.Escape))
             {
-                Application.Quit();
+                appController.LoadScene("MainMenuScene");
             }
 
             // Only allow the screen to sleep when not tracking.

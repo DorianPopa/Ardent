@@ -42,6 +42,14 @@ public class MainMenuManager : MonoBehaviour
         Username.GetComponent<TMP_Text>().text = currentSession.username;
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Logout();
+        }
+    }
+
     private void UpdateProjectListOnScreen()
     {
         foreach (Project p in ProjectList)

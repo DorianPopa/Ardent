@@ -27,6 +27,14 @@ public class LoginMenuManager : MonoBehaviour
         errorField.enabled = false;
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
 
     public void UpdatePassword()
     {
