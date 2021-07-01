@@ -190,3 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bd8701a26b547478928551bc19ebf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objPathToLoad: 

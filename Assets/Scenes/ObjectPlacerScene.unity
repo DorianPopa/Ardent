@@ -286,12 +286,27 @@ PrefabInstance:
     - target: {fileID: 114747870037459092, guid: 26558ae1d2e7243728486d789f984c53,
         type: 3}
       propertyPath: m_MaxPointCount
-      value: 10000
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 114747870037459092, guid: 26558ae1d2e7243728486d789f984c53,
         type: 3}
       propertyPath: EnablePopAnimation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747870037459092, guid: 26558ae1d2e7243728486d789f984c53,
+        type: 3}
+      propertyPath: m_DefaultSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747870037459092, guid: 26558ae1d2e7243728486d789f984c53,
+        type: 3}
+      propertyPath: MaxPointsToAddPerFrame
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747870037459092, guid: 26558ae1d2e7243728486d789f984c53,
+        type: 3}
+      propertyPath: m_PopSize
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26558ae1d2e7243728486d789f984c53, type: 3}

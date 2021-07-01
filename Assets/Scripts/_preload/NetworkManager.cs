@@ -4,11 +4,10 @@ using System.Threading.Tasks;
 using UnityEngine;
 using System.Net.Http;
 using System.IO;
-using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour
 {
-    public const string API_Base =      @"http://79.112.14.227:5000/";
+    public const string API_Base =      @"http://79.112.20.164:5000/";
     public const string API_Login =     API_Base + @"login";
     public const string API_Projects =  API_Base + @"projects";
     public const string API_Users =     API_Base + @"users";

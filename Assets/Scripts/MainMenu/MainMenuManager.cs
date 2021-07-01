@@ -75,10 +75,7 @@ public class MainMenuManager : MonoBehaviour
             try
             {
                 Stream projectArchive = await networkManager.GetProjectFilesAsync(projectId);
-
-
                 string currentObjPath = await localProjectManager.WriteNewFile(projectArchive, projectId, projectHash);
-
 
                 appController.LoadVisualizerScene(currentObjPath);
             }
